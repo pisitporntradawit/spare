@@ -7,7 +7,7 @@ export default function HomePage() {
 
   useEffect(() => {
     // สมมติว่า Go ของคุณรันอยู่ที่ http://localhost:8080
-    fetch('http://localhost:8080/api/hello')
+    fetch('http:///https://go-backend-vercel.vercel.app/ping')
       .then((res) => res.json())
       .then((data) => setMessage(data.message))
       .catch((err) => console.error("Error fetching data:", err));
