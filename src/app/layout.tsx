@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../../components/navbar";
+import { Sidebar } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "test",
@@ -14,8 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Navbar />
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+      </body>
     </html>
   );
 }
