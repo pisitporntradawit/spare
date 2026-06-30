@@ -90,15 +90,15 @@ const assets = [
 export default function AssetTable() {
     const displayAssets = assets.slice(0,10);
     return (
-        <div className="bg-white rounded-2xl border p-6 ">
-            <h2 className="text-xl font-bold mb-5">
+        <div className="bg-white rounded-2xl border p-2 ">
+            <h2 className="text-xl font-bold">
                 อุปกรณ์ล่าสุด
             </h2>
             <table className="w-full">
                 <thead>
                     <tr className="text-gray-500 border h-full">
 
-                        <th className="text-left p-3 w-32">
+                        <th className="p-1 w-32">
                             รหัส
                         </th>
 
