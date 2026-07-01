@@ -2,7 +2,7 @@ import Sidebar from "../../../components/Sidebar";
 
 async function getRoles() {
   const res = await fetch(
-    `${process.env.API_URL}/role`,
+    `${process.env.API_URL}/role/`,
     {
       cache: "no-store",
     }

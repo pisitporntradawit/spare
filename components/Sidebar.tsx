@@ -47,9 +47,9 @@ export default function Sidebar() {
                                 }
                         `}
                         >
+                            <Link href={menu.link} className="flex gap-4 caret-transparent" >
                             <menu.icon size={20} />
-                            <Link href={menu.link}>
-                                {menu.name}
+                            {menu.name}
                             </Link>
                         </div>
                     ))}
