@@ -5,12 +5,12 @@ import AssetTable from "../../components/AssetTable";
 
 export default function Home() {
   return (
-    <div className="flex bg-gray-50 min-h-screen text-black">
+    <div className="flex bg-gray-200 min-h-screen text-black">
       <Sidebar />
       <main className="flex-1">
         <div className="flex justify-between p-4 border-b-1">
           <h1 className="text-3xl font-bold">
-            หน้าหลัก
+            Overview
           </h1>
           <button className="bg-blue-600text-whitepx-5 py-3rounded-xl">
             + เพิ่มอุปกรณ์

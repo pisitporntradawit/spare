@@ -1,11 +1,7 @@
 import {
     Home,
     Book,
-    PlusCircle,
-    Users,
-    MapPin,
-    Wrench,
-    Settings,
+    User,
     LucideIcon
 } from "lucide-react";
 import Link from "next/link";
@@ -24,6 +20,11 @@ const menus: Menu[] = [
     {
         name: "Invoice",
         icon: Book,
+        link: "/invoice"
+    },
+        {
+        name: "Role",
+        icon: User,
         link: "/role"
     },
 ];

@@ -2,7 +2,7 @@ import Sidebar from "../../../components/Sidebar";
 
 async function getRoles() {
   const res = await fetch(
-    "https://go-backend-vercel.vercel.app/api/role/",
+    `${process.env.API_URL}/role`,
     {
       cache: "no-store",
     }
@@ -24,8 +24,16 @@ export default async function Home() {
   return (
     <div className="flex">
       <Sidebar />
-      <div className="flex-1 p-8 bg-gray-50 text-black">
-        <div className="flex flex-col justify-between mb-8">
+      <div className="flex-1 bg-gray-200 text-black">
+        <div className="flex justify-between p-4 border-b-1">
+          <h1 className="text-3xl font-bold">
+            Roles
+          </h1>
+          <button className="bg-blue-600text-whitepx-5 py-3rounded-xl">
+            + เพิ่ม Role
+          </button>
+        </div>
+        <div className="flex flex-col justify-between mb-8 p-2">
 
           {roles.map((role: any) => (
             <div key={role.id}>
