@@ -12,9 +12,6 @@ export default function Home() {
           <h1 className="text-3xl font-bold">
             Overview
           </h1>
-          <button className="bg-blue-600text-whitepx-5 py-3rounded-xl">
-            + เพิ่มอุปกรณ์
-          </button>
         </div>
         <div className="grid grid-cols-4 gap-4 space-y-4 m-2">
           <StatCard title="อุปกรณ์ทั้งหมด "value={128} />

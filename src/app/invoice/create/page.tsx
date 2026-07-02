@@ -25,7 +25,7 @@ export default function CreateInvoicePage() {
     const data = {
       invoice_number: newInvoice,
       received_date: newReceived,
-      company_id: Number(newCompany),
+      company_code: Number(newCompany),
     };
     const res = await fetch("http://localhost:30606/api/invoice/", {
       method: "POST",
@@ -83,6 +83,7 @@ export default function CreateInvoicePage() {
               text-sm
               font-medium
               mb-2
+              uppercase
             ">
               Invoice Number
             </label>
@@ -94,7 +95,7 @@ export default function CreateInvoicePage() {
               }
               value={newInvoice}
               onChange={(e) => {
-                setNewInvoice(e.target.value)
+                setNewInvoice(e.target.value.toUpperCase())
                 setInvoiceError("")
               }}
               className={`
@@ -324,10 +325,10 @@ export default function CreateInvoicePage() {
 
 
         </div>
-{
-  message && (
-    <div
-      className="
+        {
+          message && (
+            <div
+              className="
         fixed
         inset-0
         flex
@@ -336,9 +337,9 @@ export default function CreateInvoicePage() {
         bg-black/80
         z-50
       "
-    >
-      <div
-        className="
+            >
+              <div
+                className="
           text-white
           px-6
           py-4
@@ -348,11 +349,11 @@ export default function CreateInvoicePage() {
           items-center
           gap-3
         "
-      >
-        {message}
+              >
+                {message}
 
-        <Link href={"/"}
-          className="
+                <Link href={"/"}
+                  className="
             bg-white
             text-green-600
             px-5
@@ -360,14 +361,14 @@ export default function CreateInvoicePage() {
             rounded-lg
             hover:bg-blue-300
           "
-        >
-          OK
-        </Link>
+                >
+                  OK
+                </Link>
 
-      </div>
-    </div>
-  )
-}
+              </div>
+            </div>
+          )
+        }
 
       </form>
 
